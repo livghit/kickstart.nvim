@@ -1,6 +1,7 @@
 -- [[ Custom mappings]]
 vim.keymap.set('n', '<leader>e', '<cmd>Oil<CR>', { desc = 'Oil it BABY' })
 vim.keymap.set('n', '<leader>bd', '<cmd>bd<CR>', { desc = 'Drop Buffer' })
+vim.keymap.set('n', '<leader>tc', '<cmd>Telescope colorscheme<CR>', { desc = 'Change colorscheme' })
 
 -- [[ Kickstarter Mappings]]
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
