@@ -1,6 +1,5 @@
 -- [[ Nvim Settings ]]
 require 'livghit.settings'
-
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 -- requiring custom keymaps

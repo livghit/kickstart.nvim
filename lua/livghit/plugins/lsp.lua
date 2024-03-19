@@ -190,6 +190,7 @@ return {
       'intelephense', -- PHP lsp
       'pint', -- PHP Formatter by Laravel team
       'typescript-language-server',
+      'gleam', -- Gleam lsp
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
