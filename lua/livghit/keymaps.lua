@@ -1,6 +1,8 @@
 -- [[ Custom mappings]]
 vim.keymap.set('n', '<leader>e', '<cmd>Oil<CR>', { desc = 'Oil it BABY' })
 vim.keymap.set('n', '<leader>bd', '<cmd>bd<CR>', { desc = 'Drop Buffer' })
+vim.keymap.set('n', '<leader>bn', '<cmd>bn<CR>', { desc = 'Next Buffer' })
+vim.keymap.set('n', '<leader>bp', '<cmd>bp<CR>', { desc = 'Prev Buffer' })
 vim.keymap.set('n', '<leader>tc', '<cmd>Telescope colorscheme<CR>', { desc = 'Change colorscheme' })
 
 -- [[ Kickstarter Mappings]]
