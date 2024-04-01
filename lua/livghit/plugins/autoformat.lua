@@ -11,6 +11,7 @@ return {
       lua = { 'stylua' },
       php = { 'pint' },
       html = { 'prettier' },
+      astro = { 'prettier' },
       javascript = { 'prettier' },
       javascriptreact = { 'prettier' },
       ml = { 'ocamlformat' },
