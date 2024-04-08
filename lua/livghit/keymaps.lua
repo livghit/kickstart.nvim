@@ -5,6 +5,14 @@ vim.keymap.set('n', '<leader>bn', '<cmd>bn<CR>', { desc = 'Next Buffer' })
 vim.keymap.set('n', '<leader>bp', '<cmd>bp<CR>', { desc = 'Prev Buffer' })
 vim.keymap.set('n', '<leader>tc', '<cmd>Telescope colorscheme<CR>', { desc = 'Change colorscheme' })
 
+-- [[ Run Test ]]
+vim.keymap.set('n', '<leader>tn', function()
+  require('neotest').run.run()
+end)
+
+vim.keymap.set('n', '<leader>tf', function()
+  require('neotest').run.run(vim.fn.expand '%')
+end)
 -- [[ Kickstarter Mappings]]
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
