@@ -8,11 +8,11 @@ vim.keymap.set('n', '<leader>tc', '<cmd>Telescope colorscheme<CR>', { desc = 'Ch
 -- [[ Run Test ]]
 vim.keymap.set('n', '<leader>tn', function()
   require('neotest').run.run()
-end)
+end, { desc = 'Run single Test' })
 
 vim.keymap.set('n', '<leader>tf', function()
   require('neotest').run.run(vim.fn.expand '%')
-end)
+end, { desc = 'Run file Test' })
 -- [[ Kickstarter Mappings]]
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
