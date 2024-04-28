@@ -9,7 +9,7 @@ return {
     },
     formatters_by_ft = {
       lua = { 'stylua' },
-      php = { 'pint', 'prettier' },
+      php = { { 'pint', 'blade-formatter' } },
       go = { 'goimports', 'gofmt', 'gopls' },
       html = { 'prettier' },
       astro = { 'prettier' },
