@@ -1,6 +1,6 @@
 -- [[ Custom mappings]]
--- vim.keymap.set('n', '<leader>e', '<cmd>lua MiniFiles.open()<CR>', { desc = 'Mini Files Explorer' })
-vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<CR>', { desc = 'Files Explorer toggle' })
+vim.keymap.set('n', '<leader>e', '<cmd>lua MiniFiles.open()<CR>', { desc = 'Mini Files Explorer' })
+--vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<CR>', { desc = 'Files Explorer toggle' })
 vim.keymap.set('n', '<leader>bd', '<cmd>bd<CR>', { desc = 'Drop Buffer' })
 vim.keymap.set('n', '<leader>bn', '<cmd>bn<CR>', { desc = 'Next Buffer' })
 vim.keymap.set('n', '<leader>bp', '<cmd>bp<CR>', { desc = 'Prev Buffer' })
