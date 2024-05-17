@@ -216,6 +216,7 @@ return {
           require('lspconfig')[server_name].setup(server)
         end,
       },
+      require('lspconfig').gleam.setup {},
     }
 
     vim.filetype.add { extension = { templ = 'templ' } }
