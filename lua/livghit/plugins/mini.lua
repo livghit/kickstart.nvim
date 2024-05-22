@@ -17,7 +17,7 @@ return { -- Collection of various small independent plugins/modules
     require('mini.surround').setup()
 
     -- Files plugin
-    require('mini.files').setup() -- replaced with nvim tree
+    --    require('mini.files').setup() -- replaced with nvim tree
 
     -- Simple and easy statusline.
     --  You could remove this setup call if you don't like it,
