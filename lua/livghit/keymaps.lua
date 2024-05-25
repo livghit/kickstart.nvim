@@ -1,5 +1,5 @@
 -- [[ Custom mappings]]
-vim.keymap.set('n', '<leader>e', '<CMD>Oil<CR>', { desc = 'Oil File Explorer' })
+vim.keymap.set('n', '<leader>e', '<CMD>lua MiniFiles.open()<CR>', { desc = 'File Explorer' })
 --vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<CR>', { desc = 'Files Explorer toggle' })
 vim.keymap.set('n', '<leader>bd', '<cmd>bd<CR>', { desc = 'Drop Buffer' })
 vim.keymap.set('n', '<leader>bn', '<cmd>bn<CR>', { desc = 'Next Buffer' })
