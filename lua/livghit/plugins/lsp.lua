@@ -182,6 +182,7 @@ return {
       'intelephense', -- PHP lsp
       'pint', -- PHP Formatter by Laravel team
       'typescript-language-server',
+'ruby',
     })
 
     local lspconfig = require 'lspconfig'
