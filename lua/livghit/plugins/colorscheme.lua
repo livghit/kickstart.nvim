@@ -5,17 +5,17 @@ return {
   -- 'nyoom-engineering/oxocarbon.nvim', -- Oxocarbon colorscheme
   --  'rose-pine/neovim', -- Rosepine neovim
   -- name = 'rose-pine',
-  'catppuccin/nvim',
+  'arcticicestudio/nord-vim',
   --'rebelot/kanagawa.nvim',
   --'ayu-theme/ayu-vim',
-  name = 'catppuccin',
+  name = 'nord',
   priority = 1000, -- make sure to load this before all the other start plugins
   init = function()
     -- Load the colorscheme here.
     -- Like many other themes, this one has different styles, and you could load
     -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
     vim.opt.background = 'dark' -- set this to dark or light
-    vim.cmd.colorscheme 'catppuccin'
+    vim.cmd.colorscheme 'nord'
     -- You can configure highlights by doing something like
     vim.cmd.hi 'Comment gui=none'
   end,
