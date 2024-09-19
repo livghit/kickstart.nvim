@@ -148,6 +148,7 @@ return {
       'stylua', -- Used to format lua code
       'gopls', -- Go lsp
       'intelephense', -- PHP lsp
+      'ts_ls', -- TS lsp
       'pint', -- PHP Formatter by Laravel team
     })
 
