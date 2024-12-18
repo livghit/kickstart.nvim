@@ -19,6 +19,7 @@ return {
       ml = { 'ocamlformat' },
       ocaml = { 'ocamlformat' },
       javascript = { { 'prettierd', 'prettier' } },
+      python = { 'black' },
     },
   },
 }
