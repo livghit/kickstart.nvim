@@ -147,6 +147,7 @@ return {
     vim.list_extend(ensure_installed, {
       'stylua', -- Used to format lua code
       'gopls', -- Go lsp
+      'rust-analyzer', -- Rust lsp
       'intelephense', -- PHP lsp
       'ts_ls', -- TS lsp
       'pint', -- PHP Formatter by Laravel team
@@ -159,19 +160,24 @@ return {
 
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
-    require('mason-lspconfig').setup {
-      handlers = {
-        function(server_name)
-          local server = servers[server_name] or {}
-          -- This handles overriding only values explicitly passed by the server configuration above. Useful when disabling
-          -- certain features of an LSP (for example, turning off formatting for tsserver)
-          server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-          require('lspconfig')[server_name].setup(server)
-        end,
-      },
-      require('lspconfig').gleam.setup {},
-    }
+    -- Autoloading all the installed packages
+    local mason_registry = require 'mason-registry'
+    local installed_packages = mason_registry.get_installed_packages()
 
-    vim.filetype.add { extension = { templ = 'templ' } }
+    for _, package in ipairs(installed_packages) do
+      local server_name = package.name
+
+      -- Check if the package corresponds to an LSP server
+      if lspconfig[server_name] then
+        -- Dynamically require and setup the server
+        require('lspconfig')[server_name].setup {
+          on_attach = function(client, bufnr)
+            print(server_name .. ' is now active!')
+            -- Optionally set up keymaps or other LSP settings here
+          end,
+          capabilities = vim.lsp.protocol.make_client_capabilities(),
+        }
+      end
+    end
   end,
 }
